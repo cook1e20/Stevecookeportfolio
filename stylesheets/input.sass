@@ -1,15 +1,52 @@
 body 
     margin: 0
-    
-.pageTop
+  
+a 
+    text-decoration: none
+a:visited  
+    color: #000000
+
+#pageTop
     height: 100vh
     width: 100vw
-    //background-image: url('../images/IMG_0867.jpg')
-    background-repeat: no-repeat
-    background-size: cover 
+
     left: 0px
     top: 0px
+
+#nav-menu
+    display: flex
+    position: fixed 
+    top: 0 
+    left: 0
+    width: 100%
+
     
+
+#nav-bar
+    display: flex
+    position: absolute
+    right: 0px
+    top: 0px
+    flex-direction: row
+    
+
+.nav-item
+    display: flex 
+    margin: 1em 
+    
+    p
+        font-family: Roboto
+        font-style: normal
+        font-weight: normal
+        line-height: normal
+        font-size: 1em
+        padding: 0.5em
+
+.nav-item:hover
+    cursor: none
+    
+    background-color: #000000
+    color: #ffffff
 
 .titleLeft
     height: 100vh
@@ -40,14 +77,128 @@ body
     #placeholder
         height: 2em
         display: flex 
-.about
     
+#about
+    font-family: Roboto
+    line-height: normal        
+    text-align: justify
+    
+
+        
+
+#about-text
+    padding: 2em
+    flex-basis: 40em
+    font-size: 1.5
+    p 
+        padding-right: 1em
+
+#about-top
+     display: flex
+     flex-wrap: wrap 
+     justify-content: space-around
+
+#portrait
+    display: block
+    max-width: 500px
+    width: auto
+    height: auto
+    border-radius: 25px
+    margin: 2em
+
 .nav
     position: fixed
 
-   
+.subTitle
+    margin-left: 2em
+
 @media (max-device-width: 400px)  
     .titleLeft
         width: 100vw
 
+    .skillsContainer
+        flex-wrap: wrap 
     
+    .skills
+        min-width: 80%
+        
+.skillsContainer
+    display: flex 
+    flex-direction: row
+    padding: 0.5em
+    justify-content: space-between
+    margin: 0.5em
+    
+
+.skills
+    
+    flex-direction: column
+    justify-content: center
+    width: 425px 
+    border-radius: 25px 
+    flex-shrink: 1
+    background-color:#000
+    margin: 1em
+
+    color: #FFFFFF
+    text-align: center
+    padding: 1em 2em 1em 2em
+    font-size: 1.25em
+
+    h4 
+        margin: 0
+        margin-bottom: 0.5em
+        font-size: 1.5
+
+    .title
+        font-weight: bold
+        font-size: 2em
+        margin: 0.5em
+        margin-bottom: 0
+
+    img 
+        align-self: center
+        padding: 1em
+        color: #CFCFCF
+        top: 15px
+
+    #pen 
+        width: 84px
+        height: 84px 
+
+    #laptop 
+        width: 106px
+        height: 83px
+
+    #aircraft 
+        width: 94px
+        height: 75.01px
+
+
+.skillsContainer:hover > .skills 
+    opacity: 0.5
+    
+.skillsContainer:hover > .skills:hover
+    opacity: 1
+
+li 
+    list-style-type: none
+
+#work
+    margin: 2em
+    display: grid
+    grid-template-columns: auto auto
+    grid-column-gap: 2em
+    grid-row-gap: 2em
+
+
+    .work
+        background: blue
+        padding: 20px
+
+#contact
+    margin: 2em
+
+
+.footerText    
+    text-align: center

@@ -24,7 +24,7 @@ function setText() {
     }
   } else if (i === j) {
     title++;
-    if (title == titles.length) {
+    if (title === titles.length) {
       title = 0;
     }
 
