@@ -3,6 +3,7 @@ body
   
 a 
     text-decoration: none
+    color: #000000
 a:visited  
     color: #000000
 
@@ -121,6 +122,8 @@ a:visited
     
     .skills
         min-width: 80%
+    #about-text
+        order: -1
         
 .skillsContainer
     display: flex 
@@ -187,18 +190,82 @@ li
 #work
     margin: 2em
     display: grid
-    grid-template-columns: auto auto
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr))
     grid-column-gap: 2em
-    grid-row-gap: 2em
-
-
-    .work
-        background: blue
-        padding: 20px
+    grid-row-gap: 2em 
+    
+#scookelimited       
+    img 
+         width: 100%
+       
+        
+        
 
 #contact
-    margin: 2em
+    
+    background-color: #041520
+    width: 100%
+    .form-item
+        display: flex
+        flex-direction: column
+    h2 
+        margin-left: 2em
+        color: #ffffff
+        padding-top: 1em 
 
+#contact-form
+    margin: auto
+    padding: 0em 2em 2em 2em 
+    display: grid
+    grid-template-columns: auto auto
+    grid-column-gap: 2em
+    grid-row-gap: 1em
+    color: white
+    max-width: 1000px
+    #addit
+        grid-column-start: 1
+        grid-column-end: 3 
+        height: 3em
+    input
+        background: #FFFFFF
+        border: 2px solid #B1B1B1
+        box-sizing: border-box
+        border-radius: 10px
+    button 
+        width: 312px
+        border: 3px solid #29A9DF
+        color: #29A9DF
+        box-sizing: border-box
+        border-radius: 30px
+        font-family: Roboto Condensed
+        font-size: 1.5em
+        text-align: center
+        background: #041520
+        margin: auto
+
+#footer 
+    background: #29A9DF
 
 .footerText    
     text-align: center
+    margin: 0
+    padding: 1em
+    
+#weather-reporter
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    color: #FFFFFF
+    border-radius: 10px
+    background-color: #283747
+    text-align: center
+    width: 100%
+    #degree 
+        cursor: pointer
+        color: #006dcc
+    #degree:hover 
+        color:#005096
+    .icon 
+        width: 10em
+        margin: 5em auto 5em auto
+        

@@ -76,7 +76,7 @@
                     new cultures and meeting new people. </p>
             </div>
         </container>
-        <div class="subTitle">
+        <div class="subTitle" id="skills-header">
             <h2>My Skills</h2>
         </div>
         <container class="skillsContainer">
@@ -133,8 +133,22 @@
         <h2 class="title">My Work</h2>
     </div>
     <main id='work'>
-        <div class="work"></div>
-        <div class="work"></div>
+        <div class="work" id="scookelimited">
+            <img src="./images/screencapture-scookelimited-2018-07-22-20_36_32.png">
+        </div>
+        <div class="work" id='weather-reporter'>
+            <div class="location"> </div>
+            <div class="weather"> </div>
+            <div class='icon'>
+
+            </div>
+            <div>
+                <span class="temp"></span>
+                <span id="degree"></span>
+            </div>
+
+        </div>
+
         <div class="work"></div>
         <div class="work"></div>
 
@@ -142,33 +156,44 @@
 
     <div id='contact'>
         <h2 class="title">Contact</h2>
-        <form>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-            <label for="Email">Email</label>
-            <input type="text" id="Email" name="name">
-            <label for="work">Type Of Work</label>
-            <input type="text" id="work" name="name">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="name">
-            <label for="addit">Additional Details</label>
-            <input type="text" id="addit" name="name">
-
+        <form id="contact-form">
+            <div class="form-item">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name">
+            </div>
+            <div class="form-item">
+                <label for="Email">Email</label>
+                <input type="text" id="Email" name="name">
+            </div>
+            <div class="form-item">
+                <label for="work">Type Of Work</label>
+                <input type="text" id="workcontact" name="name">
+            </div>
+            <div class="form-item">
+                <label for="company">Company</label>
+                <input type="text" id="company" name="name">
+            </div>
+            <div class="form-item" id="addit">
+                <label for="addit">Additional Details</label>
+                <input type="text" id="addit" name="name">
+            </div>
             <button>Request a CV</button>
             <button>Submit</button>
         </form>
     </div>
 
 
-    <footer id='#footer'>
-        <div class="logo"></div>
-        <p class="footerText">Living Learning Growing</p>
-        <div class='socialMedia'></div>
-        <p class="footerText">Created by me © Stephen Cooke</p>
-
+    <footer>
+        <div id="footer">
+            <div class="logo"></div>
+            <p class="footerText">Living Learning Growing</p>
+            <div class='socialMedia'></div>
+            <p class="footerText">Created by me © Stephen Cooke</p>
+        </div>
     </footer>
 
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <script src="scripts.js "></script>
 
     <script id="__bs_script__">//<![CDATA[
