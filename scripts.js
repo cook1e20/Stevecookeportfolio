@@ -39,24 +39,21 @@ function setText() {
 setTimeout(setText, 1000);
 
 
-//Weather Reporter
+//Weather Reporter (jquery)
 
 function getLocation() {
   navigator.geolocation.getCurrentPosition(logLocation);
 }
 
 function logAPI(response) {
- $(".location").html(`<h2>${response.name+ ", " + response.sys.country}</h2>`)
- $(".weather").html(`<h3>${response.weather[0].main}<h3>`)
- 
- if(response.weather[0].icon == undefined){
-  $(".icon").html(`<img src= ${response.weather[0].icon}></img>`)
-  } else { 
-    $(".icon").html(`<img src= '.images/Union.png'></img>`);
-  }
-  $(".icon").html(`<img src= ${response.weather[0].icon}></img>`);
-   $(".temp").html((response.main.temp).toFixed(1));
-    $("#degree").html("°C")
+
+$("#weather-reporter").html(`
+    <div class="location"><h2>${response.name+ ", " + response.sys.country}</h2></div>
+    <div class="weather"><h3>${response.weather[0].main}<h3></div>
+    <div class='icon'><img src= ${response.weather[0].icon || './images/Union.png'}></img></div>
+    <span class="temp">${(response.main.temp).toFixed(1)}</span>
+    <span id="degree">°C</span>`)
+
  
     console.log(response.weather[0].icon)
 }    
@@ -67,9 +64,6 @@ var degree = $("#degree").html(),
     degreeUnit = degree.replace(/[^0-9a-z]/gi, ''),
     fa = (temp * 1.8 + 32).toFixed(1);
     
-
-
-
 if (degreeUnit == "C"){
 
 $(".temp").html(fa);
@@ -91,4 +85,4 @@ function logLocation(position) {
  $.getJSON(apiURL, logAPI);
 }
 
-getLocation();
+$('#weather_button').click(getLocation)
