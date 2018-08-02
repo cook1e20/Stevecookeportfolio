@@ -157,7 +157,7 @@ a:visited {
   flex-shrink: 1;
   background-color: #000;
   margin: 1em;
-  color: #ffffff;
+  color: #FFFFFF;
   text-align: center;
   padding: 1em 2em 1em 2em;
   font-size: 1.25em;
@@ -176,7 +176,7 @@ a:visited {
 .skills img {
   align-self: center;
   padding: 1em;
-  color: #cfcfcf;
+  color: #CFCFCF;
   top: 15px;
 }
 .skills #pen {
@@ -246,15 +246,15 @@ li {
   height: 3em;
 }
 #contact-form input {
-  background: #ffffff;
-  border: 2px solid #b1b1b1;
+  background: #FFFFFF;
+  border: 2px solid #B1B1B1;
   box-sizing: border-box;
   border-radius: 10px;
 }
 #contact-form button {
   width: 312px;
-  border: 3px solid #29a9df;
-  color: #29a9df;
+  border: 3px solid #29A9DF;
+  color: #29A9DF;
   box-sizing: border-box;
   border-radius: 30px;
   font-family: Roboto Condensed;
@@ -265,7 +265,7 @@ li {
 }
 
 #footer {
-  background: #29a9df;
+  background: #29A9DF;
 }
 
 .footerText {
@@ -278,17 +278,20 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: #ffffff;
+  color: #FFFFFF;
   border-radius: 10px;
   background-color: #283747;
   text-align: center;
   width: 100%;
+  min-height: 8em;
 }
 #weather-reporter button {
-  width: 30em;
+  width: 10em;
   align-items: center;
   justify-content: center;
   margin: auto;
+  background: #ee5f46;
+  color: #ffffff;
 }
 #weather-reporter #degree {
   cursor: pointer;
