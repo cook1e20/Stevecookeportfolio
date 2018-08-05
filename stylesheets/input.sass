@@ -1,6 +1,39 @@
+//styles 
+
+p
+    font-family: Roboto
+    font-style: normal
+    font-weight: normal
+    line-height: normal
+    font-size: 1em
+    
+h1
+    font-family: Titillium Web
+    font-style: Normal 
+    font-weight: 600 
+    font-size: 4em 
+
+h2
+    font-family: Titillium Web
+    font-style: Normal 
+    font-size: 2em 
+
+h3 
+    font-family: Titillium Web
+    font-style: Normal 
+    font-size: 2em 
+
+h4 
+    font-family: Titillium Web
+    font-style: Normal 
+    font-size: 1.5
+
 body 
     margin: 0
-  
+
+
+//Navigation 
+
 a 
     text-decoration: none
     color: #000000
@@ -36,11 +69,6 @@ a:visited
     margin: 1em 
     
     p
-        font-family: Roboto
-        font-style: normal
-        font-weight: normal
-        line-height: normal
-        font-size: 1em
         padding: 0.5em
 
 .nav-item:hover
@@ -61,31 +89,22 @@ a:visited
         flex-direction: column
         margin: 0 auto
     h1
-        margin: 0 auto
-        font-family: Titillium Web
-        font-style: Normal 
-        font-weight: 600 
-        font-size: 4em 
-        
+        margin: 0 auto      
     h2
         margin: 0
         padding: 0
-        font-family: Titillium Web
-        font-style: Normal 
-        font-size: 2em 
         align-self: flex-start
 
     #placeholder
         height: 2em
         display: flex 
-    
+
+
+//About section
 #about
     font-family: Roboto
     line-height: normal        
     text-align: justify
-    
-
-        
 
 #about-text
     padding: 2em
@@ -113,17 +132,6 @@ a:visited
 .subTitle
     margin-left: 2em
 
-@media (max-device-width: 400px)  
-    .titleLeft
-        width: 100vw
-
-    .skillsContainer
-        flex-wrap: wrap 
-    
-    .skills
-        min-width: 80%
-    #about-text
-        order: -1
         
 .skillsContainer
     display: flex 
@@ -151,7 +159,6 @@ a:visited
     h4 
         margin: 0
         margin-bottom: 0.5em
-        font-size: 1.5
 
     .title
         font-weight: bold
@@ -187,6 +194,8 @@ a:visited
 li 
     list-style-type: none
 
+
+//Work Section
 #work
     margin: 2em
     display: grid
@@ -198,9 +207,40 @@ li
     img 
          width: 100%
        
-        
-        
+#weather-reporter
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    color: #FFFFFF
+    border-radius: 10px
+    background-color: #283747
+    text-align: center
+    width: 100%
+    max-height: 500px
+    min-height: 200px 
+    button 
+        width: 10em
+        align-items: center
+        justify-content: center
+        margin: auto
+        background: rgb(238,95,70)
+        color: #ffffff
 
+    #degree 
+        cursor: pointer
+        color: #006dcc
+    #degree:hover 
+        color:#005096
+    .icon 
+        width: 10em
+        margin: 0em auto 0em auto
+        img 
+            width: 100%
+
+
+
+        
+//Contact section 
 #contact
     
     background-color: #041520
@@ -243,6 +283,11 @@ li
         background: #041520
         margin: auto
 
+
+    
+
+        
+//Footer
 #footer 
     background: #29A9DF
 
@@ -250,33 +295,20 @@ li
     text-align: center
     margin: 0
     padding: 1em
+
+
+
+
+
+//Phone styling
+@media (max-device-width: 400px)  
+    .titleLeft
+        width: 100vw
+
+    .skillsContainer
+        flex-wrap: wrap 
     
-#weather-reporter
-    display: flex
-    flex-direction: column
-    justify-content: space-around
-    color: #FFFFFF
-    border-radius: 10px
-    background-color: #283747
-    text-align: center
-    width: 100%
-    min-height: 8em 
-    button 
-        width: 10em
-        align-items: center
-        justify-content: center
-        margin: auto
-        background: rgb(238,95,70)
-        color: #ffffff
-       
-    #degree 
-        cursor: pointer
-        color: #006dcc
-    #degree:hover 
-        color:#005096
-    .icon 
-        width: 10em
-        margin: 5em auto 5em auto
-        img 
-            position: relative
-        
+    .skills
+        min-width: 80%
+    #about-text
+        order: -1

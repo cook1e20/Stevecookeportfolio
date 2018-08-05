@@ -39,50 +39,57 @@ function setText() {
 setTimeout(setText, 1000);
 
 
-//Weather Reporter (jquery)
+// Weather Reporter (jquery)
+
+function logLocation(position) {
+  const latitude = position.coords.latitude.toFixed(2);
+  const longitude = position.coords.longitude.toFixed(2);
+  const apiURL = `https://fcc-weather-api.glitch.me/api/current?lat=${latitude}&lon=${longitude}`;
+  $.getJSON(apiURL, logAPI);
+}
 
 function getLocation() {
   navigator.geolocation.getCurrentPosition(logLocation);
 }
 
-function logAPI(response) {
 
-$("#weather-reporter").html(`
-    <div class="location"><h2>${response.name+ ", " + response.sys.country}</h2></div>
-    <div class="weather"><h3>${response.weather[0].main}<h3></div>
-    <div class='icon'><img src= ${response.weather[0].icon || './images/Union.png'}></img></div>
-    <span class="temp">${(response.main.temp).toFixed(1)}</span>
-    <span id="degree">°C</span>`)
+function degreeChanger() {
+  console.log('degreeChanger');
+  const degree = $('#degree').html();
+  const temp = Number($('.temp').html());
+  const degreeUnit = degree.replace(/[^0-9a-z]/gi, '');
+  const fa = (temp * 1.8 + 32).toFixed(1);
 
- 
-    console.log(response.weather[0].icon)
-}    
-  
-$("#degree").click(function(){
-var degree = $("#degree").html(),
-    temp = Number($(".temp").html()),
-    degreeUnit = degree.replace(/[^0-9a-z]/gi, ''),
-    fa = (temp * 1.8 + 32).toFixed(1);
-    
-if (degreeUnit == "C"){
-
-$(".temp").html(fa);
-$("#degree").html("°F");}
-
-else
-{ 
-getLocation();
-};
-
-});
-
-
-function logLocation(position) {
-  var latitude = position.coords.latitude.toFixed(2),
-    longitude = position.coords.longitude.toFixed(2),
-    apiURL =
-      "https://fcc-weather-api.glitch.me/api/current?lat="+latitude +"&lon=" +longitude;
- $.getJSON(apiURL, logAPI);
+  if (degreeUnit == 'C') {
+    $('.temp').html(fa);
+    $('#degree').html('°F');
+  } else {
+    getLocation();
+  }
 }
 
-$('#weather_button').click(getLocation)
+// Setup to capture degree as is loaded via JS
+window.addEventListener('click', log);
+function log(e) {
+  console.log(e.path[0].id);
+  if (e.path[0].id == 'degree') {
+    degreeChanger();
+  }
+}
+
+
+function logAPI(response) {
+  $('#weather-reporter').html(`
+    <div class="location"><h2>${`${response.name}, ${response.sys.country}`}</h2></div>
+    <div class="weather"><h3>${response.weather[0].main}<h3></div>
+    <div class='icon'><img src= ${response.weather[0].icon || './images/Union.png'}></img></div>
+    <div><span class="temp">${(response.main.temp).toFixed(1)}</span>
+    <span id="degree">°C</span></div>`);
+}
+
+
+$('#weather_button').click(() => {
+  getLocation();
+  $('#weather_button').html('Looking for local weather...');
+  $('#weather_button').disabled = true;
+});
