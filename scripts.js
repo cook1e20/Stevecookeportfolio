@@ -52,26 +52,28 @@ function getLocation() {
   navigator.geolocation.getCurrentPosition(logLocation);
 }
 
+let degreeCels;
 
 function degreeChanger() {
-  console.log('degreeChanger');
   const degree = $('#degree').html();
   const temp = Number($('.temp').html());
+
   const degreeUnit = degree.replace(/[^0-9a-z]/gi, '');
   const fa = (temp * 1.8 + 32).toFixed(1);
 
   if (degreeUnit == 'C') {
+    degreeCels = temp;
     $('.temp').html(fa);
     $('#degree').html('°F');
   } else {
-    getLocation();
+    $('.temp').html(degreeCels);
+    $('#degree').html('°C');
   }
 }
 
 // Setup to capture degree as is loaded via JS
 window.addEventListener('click', log);
 function log(e) {
-  console.log(e.path[0].id);
   if (e.path[0].id == 'degree') {
     degreeChanger();
   }

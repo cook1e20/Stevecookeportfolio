@@ -57,7 +57,7 @@
         </div>
     </header>
     <div id="about" class="about">
-        <container id="about-top">
+        <div id="about-top">
             <div>
                 <img src="./images/IMG_0867.jpg" alt="portrait" id="portrait">
             </div>
@@ -75,11 +75,11 @@
                     <br>In my spare time you’ll find me cycling, powerlifting and surfing. I love travelling and experiencing
                     new cultures and meeting new people. </p>
             </div>
-        </container>
+        </div>
         <div class="subTitle" id="skills-header">
             <h2>My Skills</h2>
         </div>
-        <container class="skillsContainer">
+        <div class="skillsContainer">
             <div id='Design' class="skills">
                 <img src="./images/Pen.svg" alt="Design Pen" id="pen">
                 <h3 class="title">Design</h3>
@@ -98,7 +98,8 @@
             <div id='Web dev' class="skills">
                 <img src="./images/laptop-solid.svg" alt="Laptop" id="laptop">
                 <h3 class="title">Web Dev</h3>
-                <p>I enjoy the problem solving and creativity that comes with creating clean code, I work across the full stack.</p>
+                <p>I enjoy the problem solving and creativity that comes with creating clean code, I work across the full stack.
+                </p>
                 <h4>Dev Skills:</h4>
 
                 <li>Visual Studio Code </li>
@@ -126,7 +127,7 @@
                 <li>System Design</li>
 
             </div>
-        </container>
+        </div>
     </div>
 
     <div class='subTitle'>
@@ -151,28 +152,26 @@
     <div id='contact'>
         <h2 class="title">Contact</h2>
         <form name="contact" id="contact-form" method='POST' netlify>
-            <div class="form-item">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+
+            <label for="Email">Email:</label>
+            <input type="email" id="Email" name="name">
+
+            <label for="company">Company</label>
+            <input type="text" id="company" name="name">
+
+            <label for="addit">Details:</label>
+            <textarea type="text" id="addit" name="name"></textarea>
+            <div id='button_div'>
+                <div>
+                    <label for="cv_check">Request CV?</label>
+                    <input type="checkbox" id="cv_check">
+                </div>
+                <button type="submit">Submit</button>
             </div>
-            <div class="form-item">
-                <label for="Email">Email</label>
-                <input type="text" id="Email" name="name">
-            </div>
-            <div class="form-item">
-                <label for="work">Type Of Work</label>
-                <input type="text" id="workcontact" name="name">
-            </div>
-            <div class="form-item">
-                <label for="company">Company</label>
-                <input type="text" id="company" name="name">
-            </div>
-            <div class="form-item" id="addit">
-                <label for="addit">Additional Details</label>
-                <input type="text" id="addit" name="name">
-            </div>
-            <button>Request a CV</button>
-            <button>Submit</button>
+        </form>
         </form>
     </div>
 
@@ -181,7 +180,11 @@
         <div id="footer">
             <div class="logo"></div>
             <p class="footerText">Living Learning Growing</p>
-            <div class='socialMedia'></div>
+            <div class='socialMedia'>
+                <img src='./images/github-brands.png'>
+                <img src='./images/twitter-brands.png'>
+                <img src='./images/envelope-open-solid.svg'>
+            </div>
             <p class="footerText">Created by me © Stephen Cooke</p>
         </div>
     </footer>

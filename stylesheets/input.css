@@ -255,42 +255,29 @@ li {
 }
 
 #contact {
+  color: white;
   background-color: #041520;
-  width: 100%;
+  padding: 0em 2em 2em 2em;
 }
-#contact .form-item {
-  display: flex;
-  flex-direction: column;
-}
-#contact h2 {
-  margin-left: 2em;
-  color: #ffffff;
+#contact .title {
   padding-top: 1em;
 }
 
 #contact-form {
-  margin: auto;
-  padding: 0em 2em 2em 2em;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-column-gap: 2em;
-  grid-row-gap: 1em;
-  color: white;
+  display: flex;
+  flex-direction: column;
   max-width: 1000px;
+  margin: auto;
 }
-#contact-form #addit {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  height: 3em;
-}
-#contact-form input {
-  background: #FFFFFF;
+#contact-form input:not([type=submit]), #contact-form textarea {
+  width: 100%;
   border: 2px solid #B1B1B1;
   box-sizing: border-box;
   border-radius: 10px;
+  font-size: 1em;
 }
 #contact-form button {
-  width: 312px;
+  width: 200px;
   border: 3px solid #29A9DF;
   color: #29A9DF;
   box-sizing: border-box;
@@ -299,11 +286,38 @@ li {
   font-size: 1.5em;
   text-align: center;
   background: #041520;
-  margin: auto;
+}
+
+#button_div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2em;
+}
+#button_div div {
+  display: flex;
+  align-items: center;
+}
+#button_div label {
+  width: 175px;
+  margin: 1px;
+}
+#button_div #cv_check {
+  height: 1em;
 }
 
 #footer {
   background: #29A9DF;
+}
+
+.socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialMedia img {
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .footerText {
