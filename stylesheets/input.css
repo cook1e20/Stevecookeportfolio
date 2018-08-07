@@ -238,6 +238,7 @@ li {
   margin: auto;
   background: #ee5f46;
   color: #ffffff;
+  cursor: pointer;
 }
 #weather-reporter #degree {
   cursor: pointer;
@@ -252,6 +253,17 @@ li {
 }
 #weather-reporter .icon img {
   width: 100%;
+}
+#weather-reporter a {
+  color: #006dcc;
+  margin: 0.5em;
+}
+#weather-reporter a:hover {
+  text-decoration: underline;
+  color: #005096;
+}
+#weather-reporter #weatherdiv {
+  display: flex;
 }
 
 #contact {
@@ -318,6 +330,9 @@ li {
 .socialMedia img {
   padding-left: 2em;
   padding-right: 2em;
+}
+.socialMedia img:hover {
+  transform: scale(1.1);
 }
 
 .footerText {

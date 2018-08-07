@@ -81,12 +81,18 @@ function log(e) {
 
 
 function logAPI(response) {
-  $('#weather-reporter').html(`
+  $('weather-reporter').html(`
+  <div id='weather'>
     <div class="location"><h2>${`${response.name}, ${response.sys.country}`}</h2></div>
     <div class="weather"><h3>${response.weather[0].main}<h3></div>
     <div class='icon'><img src= ${response.weather[0].icon || './images/Union.png'}></img></div>
     <div><span class="temp">${(response.main.temp).toFixed(1)}</span>
-    <span id="degree">°C</span></div>`);
+    <span id="degree">°C</span></div>
+    <div >
+    <a href='https://github.com/cook1e20/Weather-reporter'>Check out the Code</a>
+    </div>
+  </div>
+    `);
 }
 
 
